@@ -11,8 +11,8 @@
 #include "CryptoFunctions.h"
 
 KeyPair::KeyPair() {
-	this->publicKey = std::make_unique<std::uint8_t[]>(ECC_BYTES + 1);
-	this->privateKey = std::make_unique<std::uint8_t[]>(ECC_BYTES);
+	this->publicKey = std::make_shared<std::uint8_t[]>(ECC_BYTES + 1);
+	this->privateKey = std::make_shared<std::uint8_t[]>(ECC_BYTES);
 	ecc_make_key(publicKey.get(), privateKey.get());
 }
 

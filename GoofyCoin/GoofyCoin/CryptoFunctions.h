@@ -10,7 +10,7 @@ void sigDemo();
 
 class KeyPair {
 public:
-	std::unique_ptr<uint8_t[]> publicKey;
-	std::unique_ptr<uint8_t[]> privateKey;
+	std::shared_ptr<uint8_t[]> publicKey;
+	std::shared_ptr<uint8_t[]> privateKey;
 	KeyPair();
 };
